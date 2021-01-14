@@ -1,6 +1,9 @@
 const { data } = require("./data.js");
 
 const findPath = (start, end, data) => {
+  if (!data || !start || !end) throw "not valid paramaters";
+  if (!data[start] && !data[end]) throw "type error";
+
   // COUNTER FOR LETTERS VISITED
   const visited = [];
 
@@ -28,7 +31,7 @@ const findPath = (start, end, data) => {
         table[letter].previous = currentLetter;
       }
     });
-
+    // TO INCREMENT LETTERS VISITED
     visited.push(currentLetter);
 
     // GET THE SHORTEST PATH
@@ -40,9 +43,7 @@ const findPath = (start, end, data) => {
     if (!shortestPath) currentLetter = start;
     else currentLetter = shortestPath.letter;
   }
-  return table[end];
+  return table[end].distanceFrom;
 };
 
-const result = findPath("b", "h", data);
-
-console.log(result);
+module.exports = { findPath };

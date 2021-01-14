@@ -1,0 +1,14 @@
+{
+  "name": "path-finder",
+  "version": "1.0.0",
+  "description": "A pathfinding tech test",
+  "main": "main.js",
+  "author": "Charlie Richardson <charlie.robin.richardson@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}

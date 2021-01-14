@@ -1,7 +1,7 @@
 const { data } = require("./data.js");
 const { findPath } = require("./main.js");
 
-const wrongData = { 1: "one" };
+const wrongData = { 1: "one", 2:"2" };
 
 describe("Testing to find shortest path", () => {
   it("Should take the shortest path", () => {

@@ -39,7 +39,7 @@ const findPath = (start, end, data) => {
       .filter((letter) => !visited.includes(letter.letter))
       .sort((current, previous) => current.value - previous.value)[0];
 
-    // TO CATCH BOTTLENECKS
+    // TO CATCH BOTTLENECKS => GO BACK TO START
     if (!shortestPath) currentLetter = start;
     else currentLetter = shortestPath.letter;
   }

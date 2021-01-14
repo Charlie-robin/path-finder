@@ -30,4 +30,5 @@ In the example above, the shortest route is B, D, G, H – which gives a distanc
 There is a route with fewer hops, B, E, H, but it has a greater distance of 17 which means that is not the shortest route.Requirements
 
 This should be a vanilla Javascript application, no libraries or frameworks
+
 You should be writing Unit Tests for core functionality

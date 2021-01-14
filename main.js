@@ -12,6 +12,7 @@ const findPath = (start, end, data) => {
 
   // TABLE TO UPDATE
   const table = letters.reduce((result, current) => {
+    // DISTANCE FROM = HIGH NUMBER , PREVIOUS = LETTER => DEBUGGING
     result[current] = { distanceFrom: Infinity, previous: "" };
     return result;
   }, {});
@@ -22,9 +23,11 @@ const findPath = (start, end, data) => {
 
   // GO THROUGH DATA UPDATE TABLE
   while (visited.length !== letters.length) {
+    // GET CONNECTING LETTERS
     const connections = data[currentLetter];
-
+  
     connections.forEach(({ letter, value }) => {
+      // WORK OUT THE MOVE TOTAL => IF IT IS SHORTER UPDATE TABLE
       const total = table[currentLetter].distanceFrom + value;
       if (total < table[letter].distanceFrom) {
         table[letter].distanceFrom = total;
